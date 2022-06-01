@@ -10,16 +10,26 @@
 }
 .screen{
   margin: auto;
+  margin-top: 15px;
   background-color: lightGray;
-  width: 250px;
+  width: 270px;
   height: 35px;
   border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.znak1{
+  min-width: 0.8em;
+  font-size:1.7em ;
+  }
 .screen1{
-  font-size: 1.8em;
+  max-width: 250px;
+font-size: 1.3em;
   text-align: right;
-}
+  }
 .buttons{
+  margin-top: 20px;
   padding:11px;
   padding-top: 11px;
   padding-bottom: 11px;
@@ -61,3 +71,4 @@ div.zero{
 div.ac{
   background-color: peru;
 }
+
