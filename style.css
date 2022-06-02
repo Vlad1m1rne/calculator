@@ -7,10 +7,16 @@
   box-shadow: 3px 3px 3px #808080;
   margin: 60px auto;
   padding:10px;
+  position: relative;
+}
+.citizen{
+text-align: center;
+color: gold;
+font-size: 0.95em;
 }
 .screen{
   margin: auto;
-  margin-top: 15px;
+  margin-top: 10px;
   background-color: lightGray;
   width: 270px;
   height: 35px;
@@ -29,7 +35,7 @@ font-size: 1.3em;
   text-align: right;
   }
 .buttons{
-  margin-top: 20px;
+  margin-top: 10px;
   padding:11px;
   padding-top: 11px;
   padding-bottom: 11px;
