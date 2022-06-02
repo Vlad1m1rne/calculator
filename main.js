@@ -13,7 +13,8 @@ let znakB = 1
 
 document.querySelector('.buttons').addEventListener('click',function(event){
 if(!event.target.classList.contains('b'))return
-if(event.target.classList.contains('ac')){screen.textContent = 0
+if(event.target.classList.contains('ac')){
+  screen.textContent = 0
   a = ''
   b = ''
   sign = ''
@@ -25,12 +26,13 @@ if(event.target.classList.contains('ac')){screen.textContent = 0
 }
 
 let key = event.target.textContent
- 
 
 
 if(numbers.includes(key) || event.target.matches('.pm')){
+  
   //вводим число а
 
+ if(a === '' && b === '' && sign === '') {
   if(event.target.matches('.pm')){
     znakA *= -1
     console.log(znakA)
@@ -39,32 +41,52 @@ if(numbers.includes(key) || event.target.matches('.pm')){
     }
     if(znakA === -1){
       z.textContent = '-'
-    }}
+      a += '-'
+      console.log(`a: ${a}, sign: ${sign}, b: ${b}, znakA: ${znakA}, znakB: ${znakB}`)
+       }
+     }
+   }
 
-  if(b == '' && sign == ''){
+  if(b === '' && sign === ''){
    if(numbers.includes(key)){ 
-     a += key
+    a += key
     screen.textContent = a
+    z.textContent = ''
     console.log(`a: ${a}, sign: ${sign}, b: ${b}, znakA: ${znakA}, znakB: ${znakB}`)
   }
 }
   //вводим число b
+
   else if(a != '' && b != '' && finish){
- 
-    b = key
+     b = key
     finish = false
   screen.textContent = b
       console.log(`a: ${a}, sign: ${sign}, b: ${b}, znakA: ${znakA}, znakB: ${znakB}`)
   }
 else {
+  if(event.target.matches('.pm')){
+    znakB *= -1
+    console.log(znakB)
+    if(znakB === 1){
+      z.textContent = ''
+    }
+    if(znakB === -1){
+      z.textContent = '-'
+      b += '-'
+      console.log(`a: ${a}, sign: ${sign}, b: ${b}, znakA: ${znakA}, znakB: ${znakB}`)
+       }
+     }
+if(numbers.includes(key)){
   b += key
 screen.textContent = b
 z.textContent = ''
   console.log(`a: ${a}, sign: ${sign}, b: ${b}, znakA: ${znakA}, znakB: ${znakB}`)
+     }
 }
 
 }
-//вводим знак
+//вводим знак операции
+
 if(mat.includes(key)){
   sign = key
   screen.textContent = key
@@ -73,18 +95,19 @@ if(mat.includes(key)){
   return
 }
 //нажато равно
+
 if(key === '=')
 {
   if(b === '') {
-    b = a*znakA
+    b = a
     console.log(`a: ${a}, sign: ${sign}, b: ${b}, znakA: ${znakA}, znakB: ${znakB}`)
   }
   switch(sign){
-  case '+': a = +a*znakA + +b*znakB
+  case '+': a = +a + +b
   break
-  case '-': a = a*znakA - b*znakB
+  case '-': a = a - b
   break
-  case 'x': a = a*znakA * b*znakB
+  case 'x': a = a * b
   break
   case '/':
 if(b =='0'){
@@ -96,11 +119,11 @@ if(b =='0'){
    console.log(`a: ${a}, sign: ${sign}, b: ${b}, znakA: ${znakA}, znakB: ${znakB}`)
    return
 }
-  else a = (a*znakA) / (b*znakB)
+  else a = (a) / (b)
   break
 }
 finish = true
-screen.textContent = a*znakA
+screen.textContent = a
 z.textContent = ''
 }
 }
