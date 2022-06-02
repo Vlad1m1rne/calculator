@@ -36,12 +36,12 @@ font-size: 1.3em;
   }
 .buttons{
   margin-top: 10px;
-  padding:11px;
+  padding:15px;
   padding-top: 11px;
   padding-bottom: 11px;
   display: flex ;
   flex-wrap: wrap;
-  justify-content:space-evenly;
+  justify-content:space-around;
 }
 
 .b{
@@ -56,6 +56,10 @@ font-size: 1.3em;
   cursor: pointer;
   user-select: none;
 }
+.plus{
+  width: 95px;
+  border-radius: 20px;
+}
 .b:hover{
   background-color: teal;
 }
@@ -67,14 +71,16 @@ div.w{
 }
 .w.aqual{
   width: 95px;
-  border-radius: 30%;
+  border-radius: 20px;
 }
 div.zero{
   background-color: silver;;
   width: 95px;
-  border-radius: 30%;
+  border-radius: 20px;
 }
 div.ac{
   background-color: peru;
+  width: 95px;
+  border-radius: 20px;
 }
 
