@@ -1,20 +1,22 @@
-.calc{
-  width:300px;
+.calc {
+  width: 300px;
   height: 450px;
   border: 2px solid black;
   background-color: DarkSlateGrey;
   border-radius: 10px;
   box-shadow: 3px 3px 3px #808080;
   margin: 60px auto;
-  padding:10px;
+  padding: 10px;
   position: relative;
 }
-.citizen{
-text-align: center;
-color: gold;
-font-size: 0.95em;
+
+.citizen {
+  text-align: center;
+  color: gold;
+  font-size: 0.95em;
 }
-.screen{
+
+.screen {
   margin: auto;
   margin-top: 10px;
   background-color: lightGray;
@@ -25,27 +27,30 @@ font-size: 0.95em;
   justify-content: space-between;
   align-items: center;
 }
-.znak1{
+
+.znak1 {
   min-width: 0.8em;
-  font-size:1.7em ;
-  }
-.screen1{
-  max-width: 250px;
-font-size: 1.3em;
-  text-align: right;
-  }
-.buttons{
-  margin-top: 10px;
-  padding:15px;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  display: flex ;
-  flex-wrap: wrap;
-  justify-content:space-around;
+  font-size: 1.7em;
 }
 
-.b{
-  margin-top:11px;
+.screen1 {
+  max-width: 250px;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+.buttons {
+  margin-top: 10px;
+  padding: 15px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.b {
+  margin-top: 11px;
   width: 60px;
   height: 60px;
   background-color: silver;
@@ -56,31 +61,38 @@ font-size: 1.3em;
   cursor: pointer;
   user-select: none;
 }
-.plus{
-  width: 95px;
-  border-radius: 20px;
-}
-.b:hover{
-  background-color: teal;
-}
-.b:active{
-  background-color: Gainsboro;
-}
-div.w{
-  background-color: MediumAquamarine;
-}
-.w.aqual{
-  width: 95px;
-  border-radius: 20px;
-}
-div.zero{
-  background-color: silver;;
-  width: 95px;
-  border-radius: 20px;
-}
-div.ac{
-  background-color: peru;
+
+.plus {
   width: 95px;
   border-radius: 20px;
 }
 
+.b:hover {
+  background-color: teal;
+}
+
+.b:active {
+  background-color: Gainsboro;
+}
+
+div.w {
+  background-color: MediumAquamarine;
+}
+
+.w.aqual {
+  width: 95px;
+  border-radius: 20px;
+}
+
+div.zero {
+  background-color: silver;
+  ;
+  width: 95px;
+  border-radius: 20px;
+}
+
+div.ac {
+  background-color: peru;
+  width: 95px;
+  border-radius: 20px;
+}
